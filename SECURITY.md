@@ -1,4 +1,4 @@
-# Security Policy for cojocarudavid.me
+# Security Policy for isaachayes.au
 
 ## 1. Supported Versions
 
@@ -13,7 +13,7 @@ We release patches for security vulnerabilities. Which versions are eligible rec
 
 ## 2. Reporting a Vulnerability
 
-We take security very seriously. If you discover a security vulnerability within cojocarudavid.me, please send an email to the project team at [your contact email] instead of using the public issue tracker so we can work on a fix in advance of the vulnerability being disclosed publicly.
+We take security very seriously. If you discover a security vulnerability within isaachayes.au, please send an email to the project team at [your contact email] instead of using the public issue tracker so we can work on a fix in advance of the vulnerability being disclosed publicly.
 
 Your efforts to responsibly disclose your findings are sincerely appreciated and will be taken into account to acknowledge your contributions.
 

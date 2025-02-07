@@ -1,13 +1,12 @@
-export const tag = "@cojocaru-david";
-export const author = "David Cojocaru";
+export const author = "Isaac Hayes";
 
 export const defaultMeta = {
-  title: "David Cojocaru - Home",
+  title: "Isaac Hayes - Home",
   description:
-    "Discover the portfolio and blog of David Cojocaru, a 16-year-old software developer and cybersecurity enthusiast from Romania. Explore his expertise in web development, programming languages, and more.",
-  keywords: ["david cojocaru", "junior software developer", "junior", "cybersecurity enthusiast", "web development", "programming", "portfolio", "blog", "romania"],
+      "Discover the portfolio and blog of Isaac Hayes, a senior developer and IoT product designer from Australia. Explore his expertise in IoT, cloud infrastructure, hardware development, and programming languages.",
+  keywords: ["Isaac Hayes", "IoT developer", "cloud infrastructure", "hardware design", "software development", "automation", "compilers", "programming languages", "patents", "RFID", "embedded systems"],
   ogImage: {
     src: "/banner.png",
-    alt: "David Cojocaru - Home",
+    alt: "Isaac Hayes - Home",
   },
 };

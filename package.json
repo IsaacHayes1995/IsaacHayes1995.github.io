@@ -1,5 +1,5 @@
 {
-  "name": "cojocarudavid.me",
+  "name": "isaachayes.au",
   "version": "1.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -48,11 +48,11 @@
   "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cojocaru-david/cojocarudavid.me.git"
+    "url": "https://github.com/cojocaru-david/isaachayes.au.git"
   },
   "bugs": {
-    "url": "https://github.com/cojocaru-david/cojocarudavid.me/issues"
+    "url": "https://github.com/cojocaru-david/isaachayes.au/issues"
   },
-  "homepage": "https://cojocarudavid.me",
+  "homepage": "https://isaachayes.au",
   "private": false
 }

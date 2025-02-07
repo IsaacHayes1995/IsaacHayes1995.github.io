@@ -1,28 +1,67 @@
 {
-  "Web Development": [
+  "IoT Development": [
     {
-      "text": "HTML",
-      "logo": "mdi:language-html5"
+      "text": "RTOS",
+      "logo": "mdi:clock-fast"
     },
     {
-      "text": "JavaScript",
-      "logo": "mdi:language-javascript"
+      "text": "Modbus",
+      "logo": "mdi:transit-connection"
     },
     {
-      "text": "CSS",
-      "logo": "mdi:language-css3"
+      "text": "MQTT",
+      "logo": "mdi:message"
     },
     {
-      "text": "PHP",
-      "logo": "mdi:language-php"
+      "text": "UHF RFID",
+      "logo": "mdi:radiobox-marked"
+    }
+    ,
+    {
+      "text": "UHF RFID",
+      "logo": "mdi:radiobox-marked"
+    }
+  ],
+  "Cloud Infrastructure": [
+    {
+      "text": "Docker",
+      "logo": "cib:docker"
+    }
+  ],
+  "Hardware Design & Development": [
+    {
+      "text": "Raspberry Pi",
+      "logo": "mdi:raspberry-pi"
     },
     {
-      "text": "Astro",
-      "logo": "simple-icons:astro"
+      "text": "STM32",
+      "logo": "mdi:memory"
+    }
+  ],
+  "Programming Languages": [
+    {
+      "text": "C#",
+      "logo": "mdi:language-c"
     },
     {
-      "text": "Tailwind CSS",
-      "logo": "mdi:tailwind"
+      "text": "C++",
+      "logo": "mdi:language-cpp"
+    },
+    {
+      "text": "Rust",
+      "logo": "mdi:language-rust"
+    },
+    {
+      "text": "Python",
+      "logo": "mdi:language-python"
+    },
+    {
+      "text": "Scala",
+      "logo": "cib:scala"
+    },
+    {
+      "text": "Java",
+      "logo": "mdi:language-java"
     }
   ],
   "Development Tools": [
@@ -31,84 +70,58 @@
       "logo": "mdi:visual-studio-code"
     },
     {
+      "text": "JetBrains IntelliJ",
+      "logo": "cib:jetbrains"
+    },
+    {
+      "text": "GraalVM",
+      "logo": "mdi:lambda"
+    },
+    {
       "text": "Git",
       "logo": "mdi:git"
+    },
+    {
+      "text": "GDB",
+      "logo": "mdi:bug"
     }
   ],
-  "Hosting and Cloud Services": [
+  "Compilers & Interpreters": [
     {
-      "text": "DigitalOcean",
-      "logo": "mdi:digital-ocean"
+      "text": "LLVM",
+      "logo": "cib:llvm"
     },
     {
-      "text": "Cloudflare",
-      "logo": "cib:cloudflare"
+      "text": "GCC",
+      "logo": "mdi:code-braces"
     },
     {
-      "text": "Netlify",
-      "logo": "cib:netlify"
+      "text": "Truffle",
+      "logo": "mdi:code-greater-than"
+    }
+  ],
+  "Databases": [
+    {
+      "text": "PostgreSQL",
+      "logo": "cib:postgresql"
+    },
+    {
+      "text": "Firebird",
+      "logo": "cib:firebird"
     }
   ],
   "Operating Systems": [
+    {
+      "text": "Linux",
+      "logo": "mdi:linux"
+    },
     {
       "text": "Windows",
       "logo": "mdi:windows"
     },
     {
-      "text": "Ubuntu",
-      "logo": "mdi:ubuntu"
-    }
-  ],
-  "Other Programming Languages and Technologies": [
-    {
-      "text": "Lua",
-      "logo": "mdi:language-lua"
-    },
-    {
-      "text": "Golang",
-      "logo": "mdi:language-go"
-    },
-    {
-      "text": "Node.js",
-      "logo": "mdi:nodejs"
-    }
-  ],
-  "Web Servers": [
-    {
-      "text": "Apache",
-      "logo": "cib:apache"
-    },
-    {
-      "text": "Nginx",
-      "logo": "cib:nginx"
-    }
-  ],
-  "Databases": [
-    {
-      "text": "MySQL",
-      "logo": "cib:mysql"
-    },
-    {
-      "text": "MongoDB",
-      "logo": "cib:mongodb"
-    }
-  ],
-  "Other Software": [
-    {
-      "text": "Discord",
-      "logo": "mdi:discord"
-    },
-    {
-      "text": "Spotify",
-      "logo": "mdi:spotify"
-    },
-    {
-      "text": "Visual Studio",
-      "logo": "mdi:visual-studio"
-    },
-    {
-      "text": "Brave",
-      "logo": "cib:brave"
+      "text": "FreeRTOS",
+      "logo": "mdi:chip"
     }
   ]
 }

@@ -1,4 +1,4 @@
-Sitemap: https://cojocarudavid.me/sitemap-index.xml
+Sitemap: https://isaachayes.au/sitemap-index.xml
 
 User-agent: *
 Allow: /

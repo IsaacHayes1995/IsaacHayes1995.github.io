@@ -1,8 +1,8 @@
-# Code of Conduct for cojocarudavid.me
+# Code of Conduct for isaachayes.au
 
 ## 1. Purpose
 
-A primary goal of cojocarudavid.me is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, ethnicity, socioeconomic status, and religion (or lack thereof).
+A primary goal of isaachayes.au is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, ethnicity, socioeconomic status, and religion (or lack thereof).
 
 ## 2. Expected Behavior
 

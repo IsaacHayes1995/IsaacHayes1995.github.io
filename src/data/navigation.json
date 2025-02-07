@@ -5,16 +5,19 @@
   },
   {
     "href": "/projects/",
-    "text": "Projects"
+    "text": "Projects & Patents"
   },
   {
-    "href": "/blog/",
-    "text": "Blog"
-  },
-  {
-    "href": "https://github.com/cojocaru-david/cojocarudavid.me",
+    "href": "https://github.com/IsaacHayes1995/",
     "target": "_blank",
     "rel": "noopener noreferrer",
     "text": "GitHub"
+  }
+,
+  {
+    "href": "https://www.linkedin.com/in/isaac-hayes/",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "text": "LinkedIn"
   }
 ]

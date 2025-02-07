@@ -10,7 +10,7 @@ export default defineConfig({
   image: {
     service: sharpImageService()
   },
-  site: "https://cojocarudavid.me",
+  site: "https://isaachayes.au",
   vite: {
     plugins: [rawFonts([".ttf", ".woff"])],
     optimizeDeps: {
