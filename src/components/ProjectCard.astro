@@ -4,8 +4,8 @@ import { Icon } from "astro-icon";
 
 interface Props {
   name: string;
-  role: "Project Lead" | "Inventor" ;
-  url: string;
+  role: "Project Lead" | "Inventor" | "Founder";
+  url: string | null;
   description: string | null;
   languages: string[];
   website: string | null;
@@ -14,6 +14,7 @@ interface Props {
 const colors = {
   'Project Lead': "gradient-pink",
   'Inventor': "gradient-indigo",
+  'Founder': "gradient-blue",
 } as const;
 
 const { name, role, url, description, languages, website } = Astro.props;
@@ -27,16 +28,20 @@ const { name, role, url, description, languages, website } = Astro.props;
       <h2
           class="text-lg font-medium dark:text-white text-zinc-700 [word-break:break-word]"
       >
-        <a href={url} target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline">
-          {name}
-        </a>
+        {url ? (
+            <a href={url} target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline">
+              {name}
+            </a>
+        ) : (
+            <span>{name}</span>
+        )}
       </h2>
       <Badge text={role} color={colors[role]} />
     </div>
   </div>
 
+  {description && <p class="leading-relaxed whitespace-pre-line">{description}</p>}
 
-  {description && <p class="leading-relaxed">{description}</p>}
   <ul class="flex flex-wrap gap-2 mt-2">
     {
       languages.map((item) => (
