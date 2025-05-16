@@ -1,4 +1,0 @@
-Sitemap: https://isaachayes.au/sitemap-index.xml
-
-User-agent: *
-Allow: /

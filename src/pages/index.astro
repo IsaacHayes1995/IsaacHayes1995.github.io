@@ -1,45 +1,91 @@
 ---
-import AppLayout from "@layouts/AppLayout.astro";
-import { Image } from "astro:assets";
-import authorImage from "../assets/me.png";
-import technologies from "@data/technologies.json";
-import Skill from "@components/Skill.astro";
-import { author } from "@data/socials";
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Sections
+import Hero from "@/components/landing/Hero.astro";
+import Process from "@/components/landing/Process.astro";
+// Components
+import BlogEntries1 from "@/components/blog/BlogEntries1.astro";
+import WorkEntries1 from "@/components/work/WorkEntries1.astro";
+// Content
+import { getCollection } from "astro:content";
+const allWork = await getCollection("work");
+// Sort posts by date
+const allPosts = await getCollection("posts");
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime(); // Convert to timestamp
+  const dateB = new Date(b.data.pubDate).getTime(); // Convert to timestamp
+  return dateB - dateA; // Compare timestamps
+});
 ---
 
-<AppLayout title="Isaac Hayes - Technology Executive & Product Strategist">
-  <header class="sm:flex sm:items-center sm:justify-between">
-    <div class="rounded aspect-square w-40 overflow-hidden inline-flex drop-shadow-none lg:drop-shadow-[0px_0px_35px_rgba(83,70,250,0.90)]">
-      <Image
-          src={authorImage}
-          alt="Image of the author"
-          loading="eager"
-          width={320}
-          height={320}
-      />
-    </div>
-    <div class="mt-8 max-w-lg 2xl:max-w-xl sm:my-0 sm:order-first">
-      <h1
-          class="mb-2 text-3xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-4xl"
+<BaseLayout>
+  <Hero />
+  <section>
+    <Wrapper class="py-24">
+      <div class="overflow-hidden">
+        <Text
+          tag="h3"
+          variant="textLG"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="dark:text-white text-base-900 text-balance"
+        >
+          Featured work
+        </Text>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12  lg:gap-1 mt-1 pt-4 relative before:absolute after:absolute before:bg-black after:bg-base-200 dark:before:bg-neutral-50 dark:after:bg-neutral-50/10 before:top-0 before:left-0 before:h-px before:w-18 after:top-0 after:right-0 after:left-20 after:h-px"
       >
-        Isaac Hayes
-      </h1>
-      <p class="mb-4 dark:text-zinc-300 text-zinc-700 flex items-center">
-        Technology Executive & Product Strategist from Australia 🇦🇺
-      </p>
-      <p
-          class="max-w-prose font-normal text-sm md:text-lg dark:text-zinc-400 text-zinc-600 sm:max-w-sm md:max-w-xl leading-relaxed"
+        {allWork.slice(0, 3).map((post) => <WorkEntries1 post={post} />)}
+      </div>
+      <div
+        class="flex justify-end mt-4 pt-2 relative before:absolute after:absolute before:bg-black after:bg-base-200 dark:before:bg-neutral-50 dark:after:bg-neutral-50/10 before:top-0 before:left-0 before:h-px before:w-18 after:top-0 after:right-0 after:left-20 after:h-px"
       >
-        I lead high-impact technology teams to commercial success—specializing in product strategy, business unit growth, and tech-led transformation.
-        From RFID platforms to IoT ecosystems, I bring deep technical expertise paired with commercial execution.
-      </p>
-      <br>
-      <p
-          class="max-w-prose font-normal text-sm md:text-lg dark:text-zinc-400 text-zinc-600 sm:max-w-sm md:max-w-xl leading-relaxed"
+        <Text
+          tag="a"
+          href="/work/home"
+          variant="textBase"
+          class="dark:text-base-400 text-base-500 text-balance"
+        >
+          All work
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+  <Process />
+  <section>
+    <Wrapper class="py-24">
+      <div class="overflow-hidden">
+        <Text
+          tag="h3"
+          variant="textLG"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="dark:text-white text-base-900 text-balance"
+        >
+          Latest relfexions
+        </Text>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 lg:gap-1 mt-1 pt-4 relative before:absolute after:absolute before:bg-black after:bg-base-200 dark:before:bg-neutral-50 dark:after:bg-neutral-50/10 before:top-0 before:left-0 before:h-px before:w-18 after:top-0 after:right-0 after:left-20 after:h-px"
       >
-        With a background in software architecture, hardware systems, and cross-sector deployments, I focus on scalable innovation, enterprise integration,
-        and aligning emerging technologies with business goals to drive value and competitive advantage.
-      </p>
-    </div>
-  </header>
-</AppLayout>
+        {allPosts.slice(0, 4).map((post) => <BlogEntries1 post={post} />)}
+      </div>
+      <div
+        class="flex justify-end mt-4 pt-2 relative before:absolute after:absolute before:bg-black after:bg-base-200 dark:before:bg-neutral-50 dark:after:bg-neutral-50/10 before:top-0 before:left-0 before:h-px before:w-18 after:top-0 after:right-0 after:left-20 after:h-px"
+      >
+        <Text
+          tag="a"
+          href="/blog/home"
+          variant="textBase"
+          class="dark:text-base-400 text-base-500 text-balance"
+        >
+          All relfexions
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

@@ -1,36 +1,17 @@
-import { defineConfig, sharpImageService } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import { readFileSync } from "node:fs";
-import mdx from '@astrojs/mdx';
-import compressor from "astro-compressor";
-
-// https://astro.build/config
+import { defineConfig } from "astro/config";
+import tailwindcss from '@tailwindcss/vite';
+import sitemap from "@astrojs/sitemap";
 export default defineConfig({
-  integrations: [tailwind(), compressor(), mdx()],
-  image: {
-    service: sharpImageService()
-  },
-  site: "https://isaachayes.au",
+  devToolbar: { enabled: false },
   vite: {
-    plugins: [rawFonts([".ttf", ".woff"])],
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"]
+    plugins: [tailwindcss()],
+  },
+  markdown: {
+    drafts: true,
+    shikiConfig: {
+      theme: "css-variables"
     }
-  }
+  },
+  site: 'https://yourdomain.com',
+  integrations: [sitemap()]
 });
-
-// vite plugin to import fonts
-function rawFonts(ext) {
-  return {
-    name: "vite-plugin-raw-fonts",
-    transform(_, id) {
-      if (ext.some(e => id.endsWith(e))) {
-        const buffer = readFileSync(id);
-        return {
-          code: `export default ${JSON.stringify(buffer)}`,
-          map: null
-        };
-      }
-    }
-  };
-}

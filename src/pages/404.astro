@@ -1,39 +1,44 @@
 ---
-import AppLayout from "@layouts/AppLayout.astro";
-const title = "Not found";
-const description = "Sorry, the page you are looking for does not exist.";
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Link from "@/components/fundations/elements/Link.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 ---
 
-<style is:inline>
-  main,
-  header,
-  html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
+<BaseLayout>
+  <section>
+    <Wrapper class="py-24">
+      <div class="max-w-xl">
+        <Text
+          tag="h1"
+          variant="textXL"
+          class="dark:text-white text-base-900 text-balance"
+        >
+          Error 404 or Page Not Found
+        </Text>
+        <Text
+          tag="p"
+          variant="textBase"
+          class="mt-2 text-base-500 dark:text-base-300 lg:text-balance"
+        >
+          Error 404, also known as "Page Not Found" error, occurs when a user
+          tries to access a web page that does not exist or is no longer
+          available on the server.
+  
+        </Text>
 
-  main:not(.home) header
-  {
-    display: none;
-  }
-
-  nav, footer, .footer {
-    display: none;
-    opacity: 0;
-  }
-</style>
-
-<AppLayout title={title} description={description}>
-  <div class="flex flex-col items-center justify-center h-screen text-center text-zinc-300">
-
-    <h1 class="font-bold text-4xl mb-4 text-center">
-      404
-    </h1>
-    <p class="text-xl font-thin text-center">{description}</p>
-
-    <a class="px-4 py-2 mt-4 text-center bg-zinc-800 text-zinc-100 rounded-md cursor-pointer hover:bg-zinc-700 transition duration-200 ease-in-out" href="/">
-      Go back to home.
-    </a>
-  </div>
-</AppLayout>
+        <div class="mt-4 flex">
+          <Link
+            href="/"
+            size="xs"
+            variant="default"
+            class="text-base-500 dark:text-base-300 lg:text-balance"
+            title="home"
+            aria-label="home">Go back Home</Link
+          >
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
