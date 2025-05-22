@@ -7,8 +7,8 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import Hero from "@/components/landing/Hero.astro";
 import Process from "@/components/landing/Process.astro";
 // Components
-import BlogEntries1 from "@/components/blog/BlogEntries1.astro";
-import WorkEntries1 from "@/components/work/WorkEntries1.astro";
+import BlogEntries1 from "@/components/reflections/BlogEntries1.astro";
+import WorkEntries1 from "@/components/innovations/WorkEntries1.astro";
 // Content
 import { getCollection } from "astro:content";
 const allWork = await getCollection("work");
@@ -33,7 +33,7 @@ allPosts.sort((a, b) => {
           data-aos-duration="1000"
           class="dark:text-white text-base-900 text-balance"
         >
-          Featured work
+          Featured innovations
         </Text>
       </div>
       <div
@@ -50,12 +50,11 @@ allPosts.sort((a, b) => {
           variant="textBase"
           class="dark:text-base-400 text-base-500 text-balance"
         >
-          All work
+          All innovations
         </Text>
       </div>
     </Wrapper>
   </section>
-  <Process />
   <section>
     <Wrapper class="py-24">
       <div class="overflow-hidden">
@@ -66,7 +65,7 @@ allPosts.sort((a, b) => {
           data-aos-duration="1000"
           class="dark:text-white text-base-900 text-balance"
         >
-          Latest relfexions
+          Latest articles
         </Text>
       </div>
       <div
@@ -83,7 +82,7 @@ allPosts.sort((a, b) => {
           variant="textBase"
           class="dark:text-base-400 text-base-500 text-balance"
         >
-          All relfexions
+          All articles
         </Text>
       </div>
     </Wrapper>

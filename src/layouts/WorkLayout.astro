@@ -75,30 +75,6 @@ const { frontmatter } = Astro.props;
                 ))
             }
           </Wrapper>
-          {
-            frontmatter.projectData.map((credit) => (
-              <div class="grid grid-cols-2  gap-4 ">
-                {Object.keys(credit).map((key) => (
-                  <div>
-                    <Text
-                      tag="h4"
-                      variant="textBase"
-                      class="text-base-950  dark:text-white  capitalize"
-                    >
-                      {key}
-                    </Text>
-                    <Text
-                      tag="p"
-                      variant="textSM"
-                      class="text-base-500  dark:text-base-400 text-balance"
-                    >
-                      {credit[key]}
-                    </Text>
-                  </div>
-                ))}
-              </div>
-            ))
-          }
         </div>
       </div>
       <div class="grid grid-cols-2 gap-1 mt-8">
@@ -180,37 +156,22 @@ const { frontmatter } = Astro.props;
                 ))
             }
           </div>
-          <div class="mt-8">
-            <Text
-              tag="h4"
-              variant="textSM"
-              class="dark:text-white text-base-900">Credits</Text
-            >
-            <div class="grid grid-cols-2 lg:grid-cols-4 w-full">
-              {
-                frontmatter.credits.map((credit) => (
-                  <div class="mt-4">
-                    <Text
-                      tag="p"
-                      variant="textSM"
-                      class="text-base-950  dark:text-white text-balance"
-                    >
-                      {credit.name}
-                    </Text>
-                    <Text
-                      tag="p"
-                      variant="textSM"
-                      class="text-base-500  dark:text-base-400 text-balance"
-                    >
-                      {credit.role}
-                    </Text>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
         </div>
       </div>
+      {frontmatter.tour && (
+            <Wrapper variant="standard" class="pt-8 pb-12">
+            <Text
+                tag="h1"
+                variant="textXL"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                class="dark:text-white text-base-900 text-balance"
+            >
+              Take a tour
+            </Text>
+            <iframe width="853" height="480" src={frontmatter.tour} frameborder="0" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;"></iframe>
+          </Wrapper>
+      )}
     </Wrapper>
   </section>
 </BaseLayout>

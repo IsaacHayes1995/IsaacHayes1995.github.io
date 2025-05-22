@@ -1,6 +1,7 @@
 import { defineCollection, z } from "astro:content";
 const work = defineCollection({
   schema: z.object({
+    tour: z.string().optional(),
     work: z.string(),
     live: z.string(),
     title: z.string(),
@@ -59,43 +60,6 @@ const work = defineCollection({
   }),
 });
 
-const store = defineCollection({
-  schema: z.object({
-    price: z.string(),
-    title: z.string(),
-    checkout: z.string(),
-    license: z.string(),
-    highlights: z.array(z.string()),
-    specifications: z
-      .array(
-        z.object({
-          name: z.string(),
-          value: z.string(),
-        })
-      )
-      .optional(),
-    description: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
-    images: z.array(
-      z.object({
-        url: z.string(),
-        alt: z.string(),
-      })
-    ),
-    faq: z
-      .array(
-        z.object({
-          question: z.string(),
-          answer: z.string(),
-        })
-      )
-      .optional(),
-  }),
-});
-
 const posts = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -115,6 +79,5 @@ const posts = defineCollection({
 });
 export const collections = {
   work: work,
-  store: store,
   posts: posts,
 };
