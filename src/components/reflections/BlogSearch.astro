@@ -144,7 +144,7 @@ const posts = await Promise.all(
       searchResults.innerHTML = results
         .map(
           (result) => `
-            <a href="/blog/posts/${result.item.slug}" class="block p-8 hover:bg-base-50 duration-300 dark:hover:bg-base-950">
+            <a href="/reflections/${result.item.slug}" class="block p-8 hover:bg-base-50 duration-300 dark:hover:bg-base-950">
                 <p class="text-sm text-base-500 text-xs block">
   ${new Date(result.item.pubDate).toLocaleDateString("en-US", {
     year: "numeric",

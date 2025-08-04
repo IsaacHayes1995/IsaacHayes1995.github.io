@@ -62,83 +62,8 @@ allPosts.sort((a, b) => {
       <div
         class="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-4 overflow-hidden"
       >
-        <div class="flex flex-col gap-1 " data-aos="fade-up" data-aos-duration="1000">
-          <Text
-            tag="p"
-            variant="textXS"
-            class="text-base-900 dark:text-white font-medium uppercase"
-          >
-            Published on
-          </Text>
-          <Text tag="span" variant="textXS">
-            <time
-              datetime={new Date(frontmatter.pubDate)}
-            />
-          </Text>
-        </div>
-        <div class="flex flex-col gap-1 " data-aos="fade-up" data-aos-duration="1200">
-          <Text
-            tag="p"
-            variant="textXS"
-            class="text-base-900 dark:text-white font-medium uppercase"
-          >
-            Author
-          </Text>
-          <Text tag="p" variant="textXS">{frontmatter.author}</Text>
-        </div>
-        <div class="flex flex-col gap-1 " data-aos="fade-up" data-aos-duration="1500">
-          <Text
-            tag="p"
-            variant="textXS"
-            class="text-base-900 dark:text-white font-medium uppercase"
-          >
-            Tags
-          </Text>
-          <div class="flex flex-col">
-            {
-              frontmatter.tags.map((tag) => (
-                <Text
-                  tag="a"
-                  variant="textXS"
-                  href={`/reflections/tags/${tag}`}
-                  class=" text-base-500 dark:text-base-300 lg:text-balance capitalize"
-                >
-                  {tag}
-                </Text>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-      
+                </div>
       <Wrapper variant="prose" class="mt-12 max-w-xl"><slot /></Wrapper>
-      <div class="mt-12">
-        <Text
-          tag="p"
-          variant="textSM"
-          class="text-base-950 dark:text-white text-balance font-medium"
-        >
-          Share on:
-        </Text>
-        <div class="flex placeholder-inherit mt-2 gap-2">
-          <Text
-            tag="a"
-            variant="textSM"
-            href="#_"
-            class="text-base-500 dark:text-base-400 text-balance"
-          >
-            Instagram
-          </Text>
-          <Text
-            tag="a"
-            variant="textSM"
-            href="#_"
-            class="text-base-500 dark:text-base-400 text-balance"
-          >
-            Twitter
-          </Text>
-        </div>
-      </div>
     </Wrapper>
   </section>
 
