@@ -12,6 +12,6 @@ export default defineConfig({
       theme: "css-variables"
     }
   },
-  site: 'https://yourdomain.com',
+  site: 'https://isaachayes.au',
   integrations: [sitemap()]
 });

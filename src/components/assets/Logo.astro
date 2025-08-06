@@ -4,12 +4,12 @@ const { class: className = "", ...rest } = Astro.props;
 
 <div class={className} {...rest}>
   <img
-    src="./src/images/brands/logo.png"
+    src="/images/logo.png"
     class="block dark:hidden"
     alt="Logo Light"
   />
   <img
-    src="./src/images/brands/logo_dark.png"
+    src="/images/logo_dark.png"
     class="hidden dark:block"
     alt="Logo Dark"
   />
